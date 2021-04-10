@@ -1,0 +1,8 @@
+
+@mixin flex(  $align:center, $j-cont:space-between, $fl-dir:row, $fl-wr:wrap) {
+  display: flex;
+  justify-content: $j-cont;
+  align-items: $align;
+  flex-direction: $fl-dir;
+  flex-wrap: $fl-wr;
+}

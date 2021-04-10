@@ -1,0 +1,19 @@
+
+.c-roulette {
+  position: relative;
+
+  &-ar {
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    transform: translateX(-50%);
+    margin-left: -1px;
+  }
+
+  canvas {
+    background-image: url('../img/roulette.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+  }
+}

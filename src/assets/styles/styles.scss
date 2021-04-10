@@ -1,0 +1,17 @@
+@import "./utils/fonts";
+@import "./utils/reset";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/helpers";
+@import "./utils/buttons";
+
+@import "./blocks/c-topbar";
+@import "blocks/c-roulette";
+@import "./blocks/c-sidebar";
+@import "./blocks/c-keyboard";
+
+@import "vue-select/src/scss/vue-select.scss";
+
+.c-topmain {
+  margin: 0 3.9375rem;
+}
