@@ -7,7 +7,7 @@
         </svg>
       </div>
     </div>
-    <div class="c-topbar__amount">
+    <!--<div class="c-topbar__amount">
       <div class="flex">
         <div class="c-topbar__amount-icon" />
         <v-select
@@ -15,17 +15,17 @@
             v-model="selected"
         ></v-select>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
 <script>
-import vSelect from 'vue-select'
+// import vSelect from 'vue-select'
 
 export default {
   name: 'CTopBar',
   components: {
-    vSelect
+    // vSelect
   },
   data() {
     return {
