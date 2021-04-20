@@ -1,14 +1,241 @@
 
 .c-keyboard {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 680px;
+  gap: 4px;
+  grid-area: Board / Board / Board / Board;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "number-0 number-3 number-6 number-9 number-12 number-15 number-18 number-21 number-24 number-27 number-30 number-33 number-36 c-row1"
+    "number-0 number-2 number-5 number-8 number-11 number-14 number-17 number-20 number-23 number-26 number-29 number-32 number-35 c-row2"
+    "number-0 number-1 number-4 number-7 number-10 number-13 number-16 number-19 number-22 number-25 number-28 number-31 number-34 c-row3"
+    ". c-range-112 c-range-112 c-range-112 c-range-112 c-range-1324 c-range-1324 c-range-1324 c-range-1324 c-range-2536 c-range-2536 c-range-2536 c-range-2536 ."
+    ". c-range-118 c-range-118 c-even c-even c-red c-red c-black c-black c-odd c-odd c-range-1936 c-range-1936 .";
+
   button {
     position: relative;
-    border-radius: 4px;
+    border-radius: 3px;
     line-height: 1;
-    width: 50px;
-    height: 50px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    //width: 50px;
+    //height: 50px;
+    min-width: 44px;
+    min-height: 44px;
     padding: 5px;
-    transition-property: background-color, box-shadow, opacity;
-    transition-duration: 200ms;
-    margin: 5px;
+    transition-property: color, box-shadow, opacity;
+    transition: 200ms all;
+  }
+}
+
+.c{
+  &-range-1936 {
+    grid-area: c-range-1936 / c-range-1936 / c-range-1936 / c-range-1936;
+  }
+  &-odd {
+    grid-area: c-odd / c-odd / c-odd / c-odd;
+  }
+  &-black {
+    grid-area: c-black / c-black / c-black / c-black;
+  }
+  &-red {
+    grid-area: c-red / c-red / c-red / c-red;
+  }
+  &-even {
+    grid-area: c-even / c-even / c-even / c-even;
+  }
+  &-range-118 {
+    grid-area: c-range-118 / c-range-118 / c-range-118 / c-range-118;
+  }
+  &-range-2536 {
+    grid-area: c-range-2536 / c-range-2536 / c-range-2536 / c-range-2536;
+  }
+  &-range-1324 {
+    grid-area: c-range-1324 / c-range-1324 / c-range-1324 / c-range-1324;
+  }
+  &-range-112 {
+    grid-area: c-range-112 / c-range-112 / c-range-112 / c-range-112;
+  }
+}
+
+@for $i from 1 through 3 {
+  .c-row#{$i} {
+    grid-area: c-row#{$i} / c-row#{$i} / c-row#{$i} / c-row#{$i};
+    border: 1px solid #323549;
+    background: #12141b;
+
+    &:hover {
+      background: #202431;
+    }
+  }
+}
+
+@for $i from 36 through 0 {
+  .number-#{$i} {
+    grid-area: number-#{$i} / number-#{$i} / number-#{$i} / number-#{$i};
+  }
+}
+
+.number-0 {
+  background: #419E3F;
+
+  &:hover {
+    background: #49b346;
+  }
+}
+
+.number, .c{
+  &-1, &-3, &-5, &-7, &-9, &-12, &-14, &-16, &-18, &-19, &-21, &-23, &-25, &-27, &-30, &-32, &-33, &-34, &-36, &-red {
+    background: #FF114A;
+
+    &:hover {
+      background: #fe6e86;
+    }
+  }
+}
+
+.number, .c {
+  &-2, &-4, &-6, &-8, &-10, &-11, &-13, &-15, &-17, &-20, &-22, &-24, &-26, &-28, &-29, &-31, &-35, &-black {
+    background: #4B5D86;
+
+    &:hover {
+      background: #6981b9;
+    }
+  }
+}
+
+.c {
+  &-even, &-odd, &-range-112, &-range-118, &-range-1324, &-range-1936, &-range-2536 {
+    border: 1px solid #323549;
+    background: #12141b;
+
+    &:hover {
+      background: #202431;
+    }
+  }
+}
+
+.c-range-112 {
+  &:hover {
+    ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-12 {
+      background: #fe6e86;
+    }
+    ~.number-2, ~.number-4, ~.number-6, ~.number-8, ~.number-10, ~.number-11 {
+      background: #6981b9;
+    }
+  }
+}
+
+.c-range-1324 {
+  &:hover {
+    ~.number-14, ~.number-16, ~.number-18, ~.number-19, ~.number-21, ~.number-23 {
+      background: #fe6e86;
+    }
+    ~.number-13, ~.number-15, ~.number-17, ~.number-20, ~.number-22, ~.number-24 {
+      background: #6981b9;
+    }
+  }
+}
+
+.c-range-2536 {
+  &:hover {
+    ~.number-25, ~.number-27, ~.number-30, ~.number-32, ~.number-33, ~.number-34, ~.number-36 {
+      background: #fe6e86;
+    }
+    ~.number-26, ~.number-28, ~.number-29, ~.number-31, ~.number-35 {
+      background: #6981b9;
+    }
+  }
+}
+
+.c-range-118 {
+  &:hover {
+    ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-12, ~.number-14, ~.number-16, ~.number-18 {
+      background: #fe6e86;
+    }
+    ~.number-2, ~.number-4, ~.number-6, ~.number-8, ~.number-10, ~.number-11, ~.number-13, ~.number-15, ~.number-17 {
+      background: #6981b9;
+    }
+  }
+}
+
+.c-range-1936 {
+  &:hover {
+    ~.number-25, ~.number-27, ~.number-30, ~.number-32, ~.number-33, ~.number-34, ~.number-36, ~.number-19, ~.number-21, ~.number-23 {
+      background: #fe6e86;
+    }
+    ~.number-26, ~.number-28, ~.number-29, ~.number-31, ~.number-35, ~.number-20, ~.number-22, ~.number-24 {
+      background: #6981b9;
+    }
+  }
+}
+
+.c-red {
+  &:hover {
+    ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-12, ~.number-14, ~.number-16, ~.number-18, ~.number-19, ~.number-21, ~.number-23, ~.number-25, ~.number-27, ~.number-30, ~.number-32, ~.number-33, ~.number-34, ~.number-36 {
+      background: #fe6e86;
+    }
+  }
+}
+
+.c-black {
+  &:hover {
+    ~.number-2, ~.number-4, ~.number-6, ~.number-8, ~.number-10, ~.number-11, ~.number-13, ~.number-15, ~.number-17, ~.number-20, ~.number-22, ~.number-24, ~.number-26, ~.number-28, ~.number-29, ~.number-31, ~.number-35 {
+      background: #6981b9;
+    }
+  }
+}
+
+.c-even {
+  &:hover {
+    ~.number-12, ~.number-14, ~.number-16, ~.number-18, ~.number-30, ~.number-32, ~.number-34, ~.number-36 {
+      background: #fe6e86;
+    }
+    ~.number-2, ~.number-4, ~.number-6, ~.number-8, ~.number-10, ~.number-20, ~.number-22, ~.number-24, ~.number-26, ~.number-28 {
+      background: #6981b9;
+    }
+  }
+}
+.c-odd {
+  &:hover {
+    ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-19, ~.number-21, ~.number-23, ~.number-25, ~.number-27, ~.number-33 {
+      background: #fe6e86;
+    }
+    ~.number-11, ~.number-13, ~.number-15, ~.number-17, ~.number-29, ~.number-31, ~.number-35 {
+      background: #6981b9;
+    }
+  }
+}
+.c-row1 {
+  &:hover {
+    ~.number-3, ~.number-9, ~.number-12, ~.number-18, ~.number-21, ~.number-27, ~.number-30, ~.number-33, ~.number-36 {
+      background: #fe6e86;
+    }
+    ~.number-6, ~.number-15, ~.number-24 {
+      background: #6981b9;
+    }
+  }
+}
+.c-row2 {
+  &:hover {
+    ~.number-5, ~.number-14, ~.number-23, ~.number-32 {
+      background: #fe6e86;
+    }
+    ~.number-2, ~.number-8, ~.number-11, ~.number-17, ~.number-20, ~.number-26, ~.number-29, ~.number-35 {
+      background: #6981b9;
+    }
+  }
+}
+.c-row3 {
+  &:hover {
+    ~.number-1, ~.number-7, ~.number-16, ~.number-19, ~.number-25, ~.number-34 {
+      background: #fe6e86;
+    }
+    ~.number-4, ~.number-10, ~.number-13, ~.number-22, ~.number-28, ~.number-31 {
+      background: #6981b9;
+    }
   }
 }

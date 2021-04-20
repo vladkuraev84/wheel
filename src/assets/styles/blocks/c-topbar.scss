@@ -18,36 +18,6 @@
       margin-right: 10px;
     }
   }
-
-  .v-select {
-    min-width: 170px;
-  }
-  .vs__search, .vs__search:focus {
-    color: #ffffff;
-  }
-  .vs {
-    &__dropdown {
-      &-toggle {
-        border: none;
-      }
-      &-menu {
-        box-shadow: none;
-        background: $lightYellow;
-        padding: 0;
-      }
-      &-option--highlight {
-        margin: 0;
-        background: $orange;
-      }
-    }
-    &__selected {
-      color: $blue;
-    }
-  }
-  .vs__open-indicator, .vs__clear {
-    fill: $lightYellow;
-    cursor: pointer;
-  }
 }
 
 .c-settings {

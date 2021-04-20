@@ -11,17 +11,13 @@
 </template>
 
 <script>
-// import vSelect from 'vue-select'
 
 export default {
   name: 'CTopBar',
   components: {
-    // vSelect
   },
   data() {
     return {
-      selected: '0.00000000',
-      options: ['0.00000000','0.00000001', '0.00000002', '0.00000003']
     }
 
   }
