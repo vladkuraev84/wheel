@@ -28,7 +28,14 @@
     padding: 5px;
     transition-property: color, box-shadow, opacity;
     transition: 200ms all;
+
+    span {
+      pointer-events: none;
+    }
   }
+}
+.choice {
+  word-break: break-all;
 }
 
 .c{
@@ -67,7 +74,7 @@
     border: 1px solid #323549;
     background: #12141b;
 
-    &:hover {
+    &:hover, &.active {
       background: #202431;
     }
   }
@@ -82,7 +89,7 @@
 .number-0 {
   background: #419E3F;
 
-  &:hover {
+  &:hover, &.active {
     background: #49b346;
   }
 }
@@ -91,7 +98,7 @@
   &-1, &-3, &-5, &-7, &-9, &-12, &-14, &-16, &-18, &-19, &-21, &-23, &-25, &-27, &-30, &-32, &-33, &-34, &-36, &-red {
     background: #FF114A;
 
-    &:hover {
+    &:hover, &.active {
       background: #fe6e86;
     }
   }
@@ -101,7 +108,7 @@
   &-2, &-4, &-6, &-8, &-10, &-11, &-13, &-15, &-17, &-20, &-22, &-24, &-26, &-28, &-29, &-31, &-35, &-black {
     background: #4B5D86;
 
-    &:hover {
+    &:hover, &.active {
       background: #6981b9;
     }
   }
@@ -112,14 +119,14 @@
     border: 1px solid #323549;
     background: #12141b;
 
-    &:hover {
+    &:hover, &.active {
       background: #202431;
     }
   }
 }
 
 .c-range-112 {
-  &:hover {
+  &:hover, &.active {
     ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-12 {
       background: #fe6e86;
     }
@@ -130,7 +137,7 @@
 }
 
 .c-range-1324 {
-  &:hover {
+  &:hover, &.active {
     ~.number-14, ~.number-16, ~.number-18, ~.number-19, ~.number-21, ~.number-23 {
       background: #fe6e86;
     }
@@ -141,7 +148,7 @@
 }
 
 .c-range-2536 {
-  &:hover {
+  &:hover, &.active {
     ~.number-25, ~.number-27, ~.number-30, ~.number-32, ~.number-33, ~.number-34, ~.number-36 {
       background: #fe6e86;
     }
@@ -152,7 +159,7 @@
 }
 
 .c-range-118 {
-  &:hover {
+  &:hover, &.active {
     ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-12, ~.number-14, ~.number-16, ~.number-18 {
       background: #fe6e86;
     }
@@ -163,7 +170,7 @@
 }
 
 .c-range-1936 {
-  &:hover {
+  &:hover, &.active {
     ~.number-25, ~.number-27, ~.number-30, ~.number-32, ~.number-33, ~.number-34, ~.number-36, ~.number-19, ~.number-21, ~.number-23 {
       background: #fe6e86;
     }
@@ -174,7 +181,7 @@
 }
 
 .c-red {
-  &:hover {
+  &:hover, &.active {
     ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-12, ~.number-14, ~.number-16, ~.number-18, ~.number-19, ~.number-21, ~.number-23, ~.number-25, ~.number-27, ~.number-30, ~.number-32, ~.number-33, ~.number-34, ~.number-36 {
       background: #fe6e86;
     }
@@ -182,7 +189,7 @@
 }
 
 .c-black {
-  &:hover {
+  &:hover, &.active {
     ~.number-2, ~.number-4, ~.number-6, ~.number-8, ~.number-10, ~.number-11, ~.number-13, ~.number-15, ~.number-17, ~.number-20, ~.number-22, ~.number-24, ~.number-26, ~.number-28, ~.number-29, ~.number-31, ~.number-35 {
       background: #6981b9;
     }
@@ -190,7 +197,7 @@
 }
 
 .c-even {
-  &:hover {
+  &:hover, &.active {
     ~.number-12, ~.number-14, ~.number-16, ~.number-18, ~.number-30, ~.number-32, ~.number-34, ~.number-36 {
       background: #fe6e86;
     }
@@ -200,7 +207,7 @@
   }
 }
 .c-odd {
-  &:hover {
+  &:hover, &.active {
     ~.number-1, ~.number-3, ~.number-5, ~.number-7, ~.number-9, ~.number-19, ~.number-21, ~.number-23, ~.number-25, ~.number-27, ~.number-33 {
       background: #fe6e86;
     }
@@ -210,7 +217,7 @@
   }
 }
 .c-row1 {
-  &:hover {
+  &:hover, &.active {
     ~.number-3, ~.number-9, ~.number-12, ~.number-18, ~.number-21, ~.number-27, ~.number-30, ~.number-33, ~.number-36 {
       background: #fe6e86;
     }
@@ -220,7 +227,7 @@
   }
 }
 .c-row2 {
-  &:hover {
+  &:hover, &.active {
     ~.number-5, ~.number-14, ~.number-23, ~.number-32 {
       background: #fe6e86;
     }
@@ -230,7 +237,7 @@
   }
 }
 .c-row3 {
-  &:hover {
+  &:hover, &.active {
     ~.number-1, ~.number-7, ~.number-16, ~.number-19, ~.number-25, ~.number-34 {
       background: #fe6e86;
     }

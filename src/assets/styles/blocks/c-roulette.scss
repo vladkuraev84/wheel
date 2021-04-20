@@ -1,6 +1,10 @@
 
 .c-roulette {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   &-ar {
     position: absolute;
@@ -17,6 +21,13 @@
     background-position: center;
     background-size: 400px;
 
-    transition: 3.6s all;
+    transition: 7.2s all;
+  }
+
+  .number {
+    position: absolute;
+    font-weight: 900;
+    font-size: 70px;
+    color: #ffffff;
   }
 }
