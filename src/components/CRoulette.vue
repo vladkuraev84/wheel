@@ -2,7 +2,7 @@
   <div class="c-roulette">
     <div class="c-roulette">
       <div class="c-roulette-ar"><img src="../assets/img/roulette-ar.svg" alt="arrow"></div>
-      <canvas id="ccanvas" width="338" height="338" />
+      <canvas ref="ccanvas" width="338" height="338" :style="{ 'transform': degree ? 'none' : null }" />
     </div>
     <button @click="startRoulette">Roll!</button>
   </div>
@@ -13,6 +13,8 @@ export default {
   name: "roulette",
   data() {
     return {
+      degree: null,
+      timeout: null,
       options: [
           '36',
           '11',
@@ -54,11 +56,21 @@ export default {
       ],
     }
   },
+  computed: {
+
+  },
 
   methods: {
     startRoulette() {
+      console.log(this.$refs.ccanvas);
+
       let random = Math.floor(Math.random() * 36);
-      console.log(random)
+      // this.$refs.ccanvas.style.transform = 'rotate(360deg)';
+      console.log(random);
+      this.timeout = setInterval(() => {
+        this.$refs.ccanvas.style.transform = 'rotate(360deg)';
+      }, 1)
+
     }
   }
 }
