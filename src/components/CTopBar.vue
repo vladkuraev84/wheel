@@ -7,15 +7,6 @@
         </svg>
       </div>
     </div>
-    <!--<div class="c-topbar__amount">
-      <div class="flex">
-        <div class="c-topbar__amount-icon" />
-        <v-select
-            :options="options"
-            v-model="selected"
-        ></v-select>
-      </div>
-    </div>-->
   </div>
 </template>
 
